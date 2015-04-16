@@ -27,6 +27,16 @@
       {answer: "black death"},
       {answer: "the black death"},
       {answer: "yersinia pestis"}])
+  question = category.questions.create(
+    question: "What vegetable in the mustard family is named for a European capital city?")
+    question.answers.create([
+      {answer: "brussels sprouts"}])
+  question = category.questions.create(
+    question: "What single city contains about 20% of the residents of its entire continent?")
+    question.answers.create([
+      {answer: "syndney"},
+      {answer: "syndney australia"},
+      {answer: "syndney, australia"}])
 
   #Seed Geography category
   category = Category.create(category: "Geography")
@@ -48,7 +58,13 @@
   question = category.questions.create(
     question: "On Earth, the lithosphere is broken up into which type of plates?")
     question.answers.create([
-      {answer: "tectonic"}])
+      {answer: "tectonic"},
+      {answer: "techtonic"}])
+  question = category.questions.create(
+    question: "Name one of the two US states whose shapes are completely rectangular.")
+    question.answers.create([
+      {answer: "wyoming"},
+      {answer: "colorado"}])
 
   #Seed Music category
   category = Category.create(category: "Music")
@@ -73,4 +89,8 @@
     question: "Which country does singer Rihanna come from?")
     question.answers.create([
       {answer: "barbados"}])
-
+question = category.questions.create(
+    question: "What was the first song to be performed in outer space?")
+    question.answers.create([
+      {answer: "happy birthday"},
+      {answer: "happy birthday to you"}])
