@@ -1,0 +1,90 @@
+.items {
+  -moz-animation-name: fromLeft;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 0.15s;
+
+  -webkit-animation-name: fromLeft;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 0.15s;
+
+  animation-name: fromLeft;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.15s;
+}
+
+@-moz-keyframes fromLeft {
+  0% {-moz-transform: translateX(100%);}
+  100% {-moz-transform: translateX(0);}
+}
+
+@-webkit-keyframes fromLeft {
+  0% {-webkit-transform: translateX(100%);}
+  100% {-webkit-transform: translateX(0);}
+}
+
+@keyframes fromLeft {
+  0% {transform: translateX(100%);}
+  100% {transform: translateX(0);}
+}
+
+.correct_answer, .incorrect_answer{
+   -moz-animation-duration: 2s;
+   -moz-animation-iteration-count: 1;
+   -moz-animation-timing-function: ease-in;
+   -moz-animation-play-state: running;
+
+   -webkit-animation-duration: 2s;
+   -webkit-animation-timing-function: ease-in;
+   -webkit-animation-iteration-count: 1;
+   -webkit-animation-play-state: running;
+
+   animation-duration: 2s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease-in;
+   animation-play-state: running;
+}
+
+.correct_answer{
+  -moz-animation-name: flashCorrect;
+  -webkit-animation-name: flashCorrect;
+  animation-name: flashCorrect;
+}
+
+.incorrect_answer{
+  -moz-animation-name: flashIncorrect;
+  -webkit-animation-name: flashIncorrect;
+  animation-name: flashIncorrect;
+}
+
+@-moz-keyframes flashCorrect {
+  0% {background-color:lightgreen;}
+  100% {background-color:transparent;}
+}
+
+@-webkit-keyframes flashCorrect {
+  0% {background-color:lightgreen;}
+  100 {background-color:transparent;}
+}
+
+@keyframes flashCorrect {
+ 0% {background-color:lightgreen;}
+ 100% {background-color:transparent;}
+}
+
+@-moz-keyframes flashIncorrect {
+  0% {background-color:red;}
+  100% {background-color:transparent;}
+}
+
+@-webkit-keyframes flashIncorrect {
+  0% {background-color:red;}
+  100 {background-color:transparent;}
+}
+
+@keyframes flashIncorrect {
+ 0% {background-color:red;}
+ 100% {background-color:transparent;}
+}

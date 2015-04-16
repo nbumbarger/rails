@@ -1,0 +1,6 @@
+<h2><%= @category.category %> Quiz</h2>
+<h3>Question <%= @category.questions.index(@question) %> of  <%= @category.questions.count %>:</h3>
+
+<%= render 'form' %>
+
+<footer class ="score_banner">Score: <span class =  ><%= @category.points_earned %> / <%= @category.points_possible %></span></footer>
