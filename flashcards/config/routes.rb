@@ -4,10 +4,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'categories#index'
+  get 'categories/manage' => 'categories#manage'
   resources :categories do
     resources :questions
   end
-  resources :manage, only: [:index]
   resources :answers
 
 

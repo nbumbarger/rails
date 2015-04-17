@@ -1,6 +1,6 @@
 <h2>Manage Flashcards</h2>
 <h3>Edit categories, or click to edit answers</h3>
-<ul class="items">
+<ul>
   <% @categories.each do |category| %>
     <li>
       <%= link_to category.category, category_question_path(category, category.questions.first) %>
