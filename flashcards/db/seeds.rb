@@ -30,23 +30,28 @@
   question = category.questions.create(
     question: "What vegetable in the mustard family is named for a European capital city?")
     question.answers.create([
-      {answer: "brussels sprouts"}])
+      {answer: "brussels sprouts"},
+      {answer: "brussel sprouts"},
+      {answer: "brussels sprout"},
+      {answer: "brussel sprout"},
+      {answer: "brussels"},
+      {answer: "brussel"}])
   question = category.questions.create(
     question: "What single city contains about 20% of the residents of its entire continent?")
     question.answers.create([
-      {answer: "syndney"},
-      {answer: "syndney australia"},
-      {answer: "syndney, australia"}])
+      {answer: "sydney"},
+      {answer: "sydney australia"},
+      {answer: "sydney, australia"}])
 
   #Seed Geography category
   category = Category.create(category: "Geography")
   question = category.questions.create(
-    question: "Which is the only borough of New York's that is located on the mainland?")
+    question: "Which is the only borough of New York that is located on the mainland?")
     question.answers.create([
       {answer: "bronx"},
       {answer: "the bronx"}])
   question = category.questions.create(
-    question: "What is the largest country that the equator passes through?")
+    question: "What is the largest country through which the equator passes?")
     question.answers.create([
       {answer: "brazil"}])
   question = category.questions.create(
@@ -71,7 +76,10 @@
   question = category.questions.create(
     question: "Who had a hit in the 00s with 'The Fear'?")
     question.answers.create([
-      {answer: "lily allen"}])
+      {answer: "lily allen"},
+      {answer: "lilly allen"},
+      {answer: "lily alan"},
+      {answer: "lilly alan"}])
   question = category.questions.create(
     question: "Who had a hit in the 90s with 'U Can't Touch This'?")
     question.answers.create([

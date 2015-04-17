@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :categories do
     resources :questions
   end
+  resources :manage, only: [:index]
   resources :answers
 
 

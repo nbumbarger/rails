@@ -1,6 +1,6 @@
 <h2>Play Flashcard Quiz</h2>
 <h3>Select a Category</h3>
-<ul class="items">
+<ul>
   <% @categories.each do |category| %>
     <li><%= link_to category.category, category_question_path(category, category.questions.first) %></a>
       <span class="score">Score: <%= category.points_earned %>/<%= category.points_possible %></span>

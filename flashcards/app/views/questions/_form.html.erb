@@ -8,6 +8,6 @@
 
 <%= form_for [@category, @question] do |f| %>
   <%= f.label @question.question %>
-  <%= f.text_field :answer, :value => "", :placeholder => "Enter answer" %>
+  <%= f.text_field :answer, :value => "", :placeholder => "Enter answer", :autofocus => true %>
   <%= f.submit "Answer"%>
 <% end %>

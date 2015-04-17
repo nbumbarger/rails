@@ -1,0 +1,14 @@
+<h2>Manage Flashcards</h2>
+<h3>Edit categories, or click to edit answers</h3>
+<ul class="items">
+  <% @categories.each do |category| %>
+    <li>
+      <%= link_to category.category, category_question_path(category, category.questions.first) %>
+      <a href="edit"><span class="icon-pencil"></span></a>
+      <a href="delete"><span class="icon-cross"></span></a>
+    </li>
+    <% end %>
+    <li>
+      <a href="new"><span class="icon-plus"><a href="new"></span>
+    </li>
+</ul>
