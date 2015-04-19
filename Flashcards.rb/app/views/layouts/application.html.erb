@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flashcards.rb</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'styles', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <body class= "">
+    <h1><%= link_to "Flashcards.rb", root_path %></h1>
+    <ul class= "nav">
+      <li><%= link_to "Play Quiz", categories_path %></li>
+      <li><%= link_to "Edit Questions", categories_manage_path %></li>
+    </ul>
+    <div class ="main">
+      <%= yield %>
+    </div>
+  </body>
+</html>

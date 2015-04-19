@@ -1,0 +1,13 @@
+<% if @question.errors.any? %>
+<ul>
+  <% @question.errors.full_messages.each do |err| %>
+  <li><%= err %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for [@category, @question] do |f| %>
+  <%= f.label @question.id, @question.text %>
+  <%= f.text_field :answer, :value=> "", :placeholder=> "Enter answer", :autofocus=> true , :autocomplete=> :off%>
+  <%= f.submit "Answer"%>
+<% end %>

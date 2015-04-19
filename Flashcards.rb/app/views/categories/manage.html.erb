@@ -1,0 +1,17 @@
+<h2>Manage Flashcards</h2>
+<h3>Edit categories, or click to edit answers</h3>
+<ul class= "animation-slide-right">
+  <% @categories.each do |category| %>
+    <li>
+      <%= link_to category.name, category_question_path(category, category.questions.first) %>
+      <%= link_to '<span class="icon-pencil"></span>'.html_safe, edit_category_path(category) %>
+      <%= link_to '<span class="icon-cross"></span>'.html_safe, category_path(category), method: :delete %>
+    </li>
+    <% end %>
+    <li>
+      <%= link_to '<span class="icon-plus"></span>'.html_safe, new_category_path %>
+    </li>
+</ul>
+<% if flash[:notice] %>
+  <div class="notice"><span class="icon-warning"></span> <%= flash[:notice].html_safe %> </div>
+<% end %>
