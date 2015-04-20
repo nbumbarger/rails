@@ -1,10 +1,7 @@
 <%= render "answer_feedback" %>
-
 <h2><%= @category.name %> Quiz</h2>
 <h3>Question <%= @question.index %> of  <%= @category.questions.count %>:</h3>
-
 <%= render "form" %>
-
 <footer class ="score_counter">
   Score: <%= @category.score %> / <%= @category.points_possible %>
 </footer>

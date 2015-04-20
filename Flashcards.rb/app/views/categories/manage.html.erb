@@ -1,6 +1,6 @@
 <h2>Manage Flashcards</h2>
 <h3>Edit categories, or click to edit answers</h3>
-<ul class= "animation-slide-right">
+<ul>
   <% @categories.each do |category| %>
     <li>
       <%= link_to category.name, category_question_path(category, category.questions.first) %>
@@ -13,5 +13,5 @@
     </li>
 </ul>
 <% if flash[:notice] %>
-  <div class="notice"><span class="icon-warning"></span> <%= flash[:notice].html_safe %> </div>
+  <div class="notice fade-in"><span class="icon-warning"></span> <%= flash[:notice].html_safe %> </div>
 <% end %>

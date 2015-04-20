@@ -1,13 +1,13 @@
 class QuestionsController < ApplicationController
 
   def show
-    @category = Category.find(params[:category_id])
+    @category = Category.active.find(params[:category_id])
     @question = Question.find(params[:id])
   end
 
   def update
     @question = Question.find(params[:id])
-    @category = Category.find(params[:category_id])
+    @category = Category.active.find(params[:category_id])
     @user_answer = answer_params[:answer].downcase
     @answer_feedback = "neutral"
 

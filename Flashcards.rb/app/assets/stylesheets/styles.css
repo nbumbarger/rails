@@ -280,101 +280,58 @@ input[type="submit"]:hover {
 }
 
 .icon-warning {
-  color:#af0000;
+  color: #af0000;
   font-size: 1em;
-  padding-right:0.25em;
+  padding: 0 0.25em 0 0;
 }
+
 .icon-warning:before {
   content: "\ea07";
 }
 
-/*-----animation-----*/
-.animation-fade-in {
-  -moz-animation: fadeIn 1s ease-in;
-  -webkit-animation: fadein 1s ease-in;
-  animation: fadein 1s ease-in;
+/*-----animations-----*/
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn .25s ease-in forwards;
+  -moz-animation:fadeIn .25s ease-in forwards;
+  animation:fadeIn .25s ease-in forwards;
 }
+@-webkit-keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
+@-moz-keyframes fadeIn {from {opacity:0;} to { opacity:1;}}
+@keyframes fadeIn {from {opacity:0;} to { opacity:1;}}
 
-@-moz-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-.animation-slide-right {
+.slide-right {
   -webkit-animation: slideRight 0.15s ease-in;
   -moz-animation: slideRight 0.15s ease-in;
   animation: slideRight 0.15s ease-in;
 }
-
 @-webkit-keyframes slideRight {
-  0% {-webkit-transform: translateX(100%);}
-  100% {-webkit-transform: translateX(0);}
-}
-
+  from {-webkit-transform: translateX(100%);} to {-webkit-transform: translateX(0);}}
 @-moz-keyframes slideRight {
-  0% {-moz-transform: translateX(100%);}
-  100% {-moz-transform: translateX(0);}
-}
-
+  from {-moz-transform: translateX(100%);} to {-moz-transform: translateX(0);}}
 @keyframes slideRight {
-  0% {transform: translateX(100%);}
-  100% {transform: translateX(0);}
-}
+  from {transform: translateX(100%);} to {transform: translateX(0);}}
 
 .icon-correct {
-  -moz-animation: flashCorrect 1.5 ease-in;
-  -webkit-animation: flashCorrect 1.5 ease-in;
-  animation: flashCorrect 1.5 ease-in;
+  -webkit-animation: flashCorrect 1.5s linear;
+  -moz-animation: flashCorrect 1.5s linear;
+  animation: flashCorrect 1.5s linear;
 }
-
-@-moz-keyframes flashCorrect {
-  0% {color:#afff4b;}
-  30% {color:#009600;}
-  100% {color:#66ff66;}
-}
-
 @-webkit-keyframes flashCorrect {
-  0% {color:#afff4b;}
-  30% {color:#009600;}
-  100% {color:#66ff66;}
-}
-
+  0% {color:#afff4b;} 30% {color:#009600;} 100% {color:#66ff66;}}
+@-moz-keyframes flashCorrect {
+  0% {color:#afff4b;} 30% {color:#009600;} 100% {color:#66ff66;}}
 @keyframes flashCorrect {
-  0% {color:#afff4b;}
-  30% {color:#009600;}
-  100% {color:#66ff66;}
-}
+  0% {color:#afff4b;} 30% {color:#009600;} 100% {color:#66ff66;}}
 
 .icon-incorrect {
-  -moz-animation: flashIncorrect 1.5 ease-in;
-  -webkit-animation: flashIncorrect 1.5 ease-in;
-  animation: flashIncorrect 1.5 ease-in;
+  -moz-animation: flashIncorrect 1.5s linear;
+  -webkit-animation: flashIncorrect 1.5s linear;
+  animation: flashIncorrect 1.5s linear;
 }
-
-@-moz-keyframes flashIncorrect {
-  0% {color:#ffc83c;}
-  30% {color:#8c0000;}
-  100% {color:#ff5656;}
-}
-
 @-webkit-keyframes flashIncorrect {
-  0% {color:#ffc83c;}
-  30% {color:#8c0000;}
-  100% {color:#ff5656;}
-}
-
+  0% {color:#ffc83c;} 30% {color:#8c0000;} 100% {color:#ff5656;}}
+@-moz-keyframes flashIncorrect {
+  0% {color:#ffc83c;} 30% {color:#8c0000;} 100% {color:#ff5656;}}
 @keyframes flashIncorrect {
-  0% {color:#ffc83c;}
-  30% {color:#8c0000;}
-  100% {color:#ff5656;}
-}
+  0% {color:#ffc83c;} 30% {color:#8c0000;} 100% {color:#ff5656;}}
